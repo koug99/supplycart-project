@@ -69,6 +69,12 @@
                 left:40%;
                 
             }
+            .mycontainer2{
+                display:flex;
+                position: absolute;
+                left:15%;
+                
+            }
             .img-border{
                 border:2pt solid black;
             }

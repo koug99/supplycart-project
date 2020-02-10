@@ -4,6 +4,8 @@
     <div class = 'jumbotron text-left'>
         @if(!Auth::guest())
             <a href="/products/create" class="btn btn-secondary float-right">Add New Product</a>
+        @else
+            <div class = 'lead float-right'>Login to gain access to adding, editing and deleting products.</div>
         @endif
         <h1>Products</h1>
     </div>

@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in!
+                    <a href="/products" class="btn btn-primary btn-center" stlye="padding-top: 50pt">View All Products</a>
                 </div>
             </div>
         </div>

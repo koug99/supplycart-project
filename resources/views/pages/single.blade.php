@@ -1,19 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <a href="/products" class="btn btn-primary btn-left" stlye="padding-top: 50pt">Back to Products</a>
-    <br>
+    <a href="/products" class="btn btn-primary align-left" style='margin-left=auto'>Back to Products</a>
+    
     <div class = 'product-display'>
         <div id='wrapper'>
+            
             <div id='left'>
                 <div class='img-border'>
                     <img src='{{asset('storage/img/'.$product->imglink)}}' alt="product image" style="width:100%">
                 </div>
                 @if(!Auth::guest())
+                    <br>
                     <a href='/products/{{$product->id}}/edit' class='btn btn-light' style='border-color: #A19694'>Edit Product</a>
 
-                    {!!Form::open(['action' => ['ProductsController@destroy', $product->id], 'method' => 'POST', 'class' => 'form-right'])!!}
+                    {!!Form::open(['action' => ['ProductsController@destroy', $product->id], 'method' => 'POST', 'class' => 'float-right'])!!}
                         {{Form::hidden('_method', 'DELETE')}}
                         {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
                     {!!Form::close()!!}
